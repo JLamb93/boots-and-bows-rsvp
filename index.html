@@ -136,22 +136,36 @@
           <span class="field-error" id="attendingError"></span>
         </div>
 
-        <!-- Guest count -->
+        <!-- Plus ones / headcount -->
         <div class="field-group" id="guestSection">
-          <label for="guestCount">Total number of guests (including yourself)</label>
-          <select id="guestCount" name="guest_count">
-            <option value="1">1 — Just me</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6+</option>
-          </select>
+          <label>How many guests are you bringing? <span class="optional">(total headcount)</span></label>
+          <div class="headcount-row">
+            <div class="headcount-box">
+              <span class="headcount-label">Adults</span>
+              <div class="stepper" id="adultStepper">
+                <button type="button" class="step-btn" data-action="dec" aria-label="Decrease adults">−</button>
+                <span class="step-val" id="adultVal">1</span>
+                <button type="button" class="step-btn" data-action="inc" aria-label="Increase adults">+</button>
+              </div>
+              <input type="hidden" name="adult_count" id="adultCount" value="1" />
+            </div>
+            <div class="headcount-box">
+              <span class="headcount-label">Children</span>
+              <div class="stepper" id="childStepper">
+                <button type="button" class="step-btn" data-action="dec" aria-label="Decrease children">−</button>
+                <span class="step-val" id="childVal">0</span>
+                <button type="button" class="step-btn" data-action="inc" aria-label="Increase children">+</button>
+              </div>
+              <input type="hidden" name="child_count" id="childCount" value="0" />
+            </div>
+          </div>
+          <p class="headcount-total">Total guests: <strong id="totalGuests">1</strong></p>
+          <input type="hidden" name="total_guest_count" id="totalGuestCount" value="1" />
         </div>
 
         <!-- Guest names -->
         <div class="field-group" id="guestNamesSection" style="display:none;">
-          <label>Additional Guest Names</label>
+          <label>Guest Names <span class="optional">(so we can prepare name cards)</span></label>
           <div id="guestNameFields"></div>
           <button type="button" class="btn-add-guest" id="addGuestBtn">+ Add Another Guest</button>
         </div>

@@ -310,6 +310,81 @@ textarea { resize: vertical; min-height: 80px; }
   background: rgba(244,167,185,0.10);
 }
 
+/* ── Headcount stepper ── */
+.headcount-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.headcount-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 12px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(196,160,122,0.28);
+  background: rgba(255,255,255,0.5);
+}
+
+.headcount-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.step-btn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(196,160,122,0.4);
+  background: rgba(255,255,255,0.7);
+  color: var(--tan-deep);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.18s;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+.step-btn:hover { border-color: var(--tan-deep); background: rgba(232,213,196,0.2); }
+.step-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.step-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--ink);
+  min-width: 28px;
+  text-align: center;
+  line-height: 1;
+}
+
+.headcount-total {
+  margin-top: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--ink-light);
+  text-align: center;
+}
+.headcount-total strong {
+  color: var(--pink-deep);
+  font-style: normal;
+  font-weight: 500;
+}
+
 /* ── Guest name fields ── */
 #guestNameFields .guest-input-wrap {
   display: flex;
