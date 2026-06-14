@@ -118,6 +118,18 @@ body::before {
 }
 .divider-star { font-size: 1rem; opacity: 0.6; }
 
+.cowboy-boot-svg {
+  display: inline-block;
+  height: 1em;
+  width: 1.25em;
+  vertical-align: -0.2em;
+}
+.guess-icon .cowboy-boot-svg {
+  height: 2rem;
+  width: 2.5rem;
+  vertical-align: middle;
+}
+
 .pre-title {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
